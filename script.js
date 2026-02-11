@@ -326,6 +326,12 @@ function loadMailbox() {
     
     const messages = [
         {
+            date: '11 Feb 2025',
+            subject: 'Todo para mi Jhumi precuosa',
+            content: 'A veces me detengo a pensar en todo lo que has traído a mi vida, y no puedo evitar sonreír. Tu presencia convierte lo simple en especial, y tu cariño es ese impulso silencioso que me anima a seguir creciendo. No sé cómo explicarlo con exactitud, pero contigo todo tiene más sentido. Gracias por ser tú, Jhumira.💫',
+            unread: true
+        },
+        {
             date: '10 Feb 2025',
             subject: 'Para la persona más especial',
             content: 'Cada día que pasa me doy cuenta de lo afortunado que soy de tenerte en mi vida. Tu sonrisa ilumina mis días más oscuros, y tu amor me da la fuerza para ser mejor cada día. Gracias por existir, Jhumira. Te amo más de lo que las palabras pueden expresar. 💕',
