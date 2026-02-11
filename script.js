@@ -371,46 +371,44 @@ function loadMailbox() {
 
 // Gallery
 function initializeGallery() {
-    const galleryGrid = document.getElementById('galleryGrid');
-    const today = new Date();
-    const currentDay = today.getDate();
-    const currentMonth = today.getMonth();
+const galleryGrid = document.getElementById('galleryGrid');
+const today = new Date();
+const currentDay = today.getDate();
+const currentMonth = today.getMonth();
+const currentYear = today.getFullYear();
+
+const photos = [
+    { unlockDay: 1, title: 'Nuestros anillos 💕', description: 'El comienzo de algo hermoso', image: 'foto1.jpeg' },
+    { unlockDay: 5, title: 'Momentos Dulces', description: 'Recuerdos que atesoramos', image: 'foto8.jpg' },
+    { unlockDay: 7, title: 'Una Semana de Amor', description: 'Celebrando nuestros momentos', image: 'foto4.jpeg' }
+];
+
+photos.forEach(photo => {
+    const item = document.createElement('div');
+    item.className = 'gallery-item';
     
-    const photos = [
-        { unlockDay: 1, title: 'Nuestros anillos 💕', description: 'El comienzo de algo hermoso', image: 'foto1.jpeg' },
-        { unlockDay: 7, title: 'Una Semana de Amor', description: 'Celebrando nuestros momentos', image: 'foto4.jpeg' },
-        { unlockDay: 14, title: 'San Valentín', description: 'Nuestro día especial' },
-        { unlockDay: 20, title: 'Tu Cumpleaños', description: 'Celebrando a la persona más especial' },
-        { unlockDay: 28, title: 'Un Mes Perfecto', description: 'Febrero completo juntos' },
-        { unlockDay: 5, title: 'Momentos Dulces', description: 'Recuerdos que atesoramos', image: 'foto8.jpg' }
-    ];
+    const isUnlocked = (currentYear === 2026 && currentMonth === 1 && currentDay >= photo.unlockDay);
     
-    photos.forEach(photo => {
-        const item = document.createElement('div');
-        item.className = 'gallery-item';
-        
-        const isUnlocked = currentMonth === 1 && currentDay >= photo.unlockDay;
-        
-        if (!isUnlocked) {
-            item.classList.add('locked');
-            item.innerHTML = `
-                <div class="gallery-placeholder">
-                    <div class="lock-icon">🔒</div>
-                    <p>Se desbloquea el ${photo.unlockDay} de Febrero</p>
-                </div>
-            `;
-        } else {
-            item.innerHTML = `
-                <img src="images/${photo.image}" class="gallery-image" alt="${photo.title}">
-                <div class="gallery-overlay">
-                    <p>${photo.title}</p>
-                    <p>${photo.description}</p>
-                </div>
-            `;
-        }
-        
-        galleryGrid.appendChild(item);
-    });
+    if (!isUnlocked) {
+        item.classList.add('locked');
+        item.innerHTML = `
+            <div class="gallery-placeholder">
+                <div class="lock-icon">🔒</div>
+                <p>Se desbloquea el ${photo.unlockDay} de Febrero</p>
+            </div>
+        `;
+    } else {
+        item.innerHTML = `
+            <img src="images/${photo.image}" class="gallery-image" alt="${photo.title}">
+            <div class="gallery-overlay">
+                <h4>${photo.title}</h4>
+                <p>${photo.description}</p>
+            </div>
+        `;
+    }
+    
+    galleryGrid.appendChild(item);
+});
 }
 
 // Valentine Modal
