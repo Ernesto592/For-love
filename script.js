@@ -257,7 +257,7 @@ function initializeCalendar() {
     const daysInFebruary = 28;
     const specialDays = {
         14: { label: 'San Valentín', icon: '💝' },
-        20: { label: 'Tu Cumpleaños', icon: '🎂' }
+        25: { label: 'Tu Cumpleaños', icon: '🎂' }
     };
     
     for (let day = 1; day <= daysInFebruary; day++) {
@@ -309,10 +309,15 @@ function showDaySurprise(day, special) {
         14: "¡Feliz San Valentín, mi amor! Eres todo para mí 💘",
         15: "Después de San Valentín, mi amor sigue creciendo 💗",
         16: "Faltan pocos días para tu cumpleaños 🎈",
-        17: "3 días para celebrarte a ti 🎊",
-        18: "2 días para tu día especial 🎉",
-        19: "¡Mañana es tu cumpleaños! 🎂",
-        20: "¡FELIZ CUMPLEAÑOS JHUMIRA! Eres increíble 🎂🎉🎁"
+        17: "Mi pastelito de fresa te amo muchito 💕💕",
+        18: "El sol ya salió y brillas igual que él 🌟☀️",
+        19: "Hoy están tan hermosa con siempre te amo 💕😍",
+        20: "Un año más de vida, de felecidad para todas las personas que te apreciamos 🫂",
+        21: "Jhumi y Ernes <3 #01"
+        22: "3 dias para tu día especial 🎊"
+        23: "2 días para tu día especial 🎉" 
+        24: "¡Mañana es tu cumpleñaos! 🎂",
+        25: "¡FELIZ CUMPLEÑAOS JHUMIRA! Eres increíble 🎂🎉🎁"
     };
     
     const defaultMessage = "Un día más de amor y felicidad juntos 💕";
