@@ -313,9 +313,9 @@ function showDaySurprise(day, special) {
         18: "El sol ya salió y brillas igual que él 🌟☀️",
         19: "Hoy están tan hermosa con siempre te amo 💕😍",
         20: "Un año más de vida, de felecidad para todas las personas que te apreciamos 🫂",
-        21: "Jhumi y Ernes <3 #01"
-        22: "3 dias para tu día especial 🎊"
-        23: "2 días para tu día especial 🎉" 
+        21: "Jhumi y Ernes <3 #01",
+        22: "3 dias para tu día especial 🎊",
+        23: "2 días para tu día especial 🎉" ,
         24: "¡Mañana es tu cumpleñaos! 🎂",
         25: "¡FELIZ CUMPLEÑAOS JHUMIRA! Eres increíble 🎂🎉🎁"
     };
