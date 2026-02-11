@@ -401,13 +401,9 @@ function initializeGallery() {
             `;
         } else {
             item.innerHTML = `
-                <div class="gallery-placeholder">
-                    <div class="lock-icon">📸</div>
-                    <p>${photo.title}</p>
-                    <p style="font-size: 12px; margin-top: 5px;">${photo.description}</p>
-                </div>
+                <img src="images/${photo.image}" class="gallery-image" alt="${photo.title}">
                 <div class="gallery-overlay">
-                    <h4>${photo.title}</h4>
+                    <p>${photo.title}</p>
                     <p>${photo.description}</p>
                 </div>
             `;
