@@ -377,8 +377,8 @@ function initializeGallery() {
     const currentMonth = today.getMonth();
     
     const photos = [
-        { unlockDay: 1, title: 'Nuestros anillos 💕', description: 'El comienzo de algo hermoso', image: 'foto1.jpg' },
-        { unlockDay: 7, title: 'Una Semana de Amor', description: 'Celebrando nuestros momentos', image: 'foto4.jpg' },
+        { unlockDay: 1, title: 'Nuestros anillos 💕', description: 'El comienzo de algo hermoso', image: 'foto1.jpeg' },
+        { unlockDay: 7, title: 'Una Semana de Amor', description: 'Celebrando nuestros momentos', image: 'foto4.jpeg' },
         { unlockDay: 14, title: 'San Valentín', description: 'Nuestro día especial' },
         { unlockDay: 20, title: 'Tu Cumpleaños', description: 'Celebrando a la persona más especial' },
         { unlockDay: 28, title: 'Un Mes Perfecto', description: 'Febrero completo juntos' },
