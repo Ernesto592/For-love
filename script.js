@@ -142,7 +142,7 @@ function initializeDashboard() {
 
 // Days Counter
 function updateDaysCounter() {
-    const startDate = new Date('2024-12-01');
+    const startDate = new Date('2025-12-01');
     const today = new Date();
     const diffTime = Math.abs(today - startDate);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
