@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Jhumira 💕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Floating hearts background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Login/Register Screen -->
+    <div class="auth-container" id="authContainer">
+        <div class="auth-box">
+            <div class="auth-header">
+                <h1 class="auth-title">Un Lugar Especial</h1>
+                <p class="auth-subtitle">Creado con amor para alguien muy especial</p>
+            </div>
+            
+            <div class="auth-forms">
+                <!-- Login Form -->
+                <form id="loginForm" class="auth-form active">
+                    <h2>Bienvenida de Nuevo</h2>
+                    <div class="input-group">
+                        <input type="text" id="loginUsername" placeholder="Usuario" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                    </div>
+                    <button type="submit" class="auth-btn">Entrar</button>
+                    <p class="auth-switch">¿Primera vez? <a href="#" id="showRegister">Regístrate aquí</a></p>
+                </form>
+
+                <!-- Register Form -->
+                <form id="registerForm" class="auth-form">
+                    <h2>Crea Tu Cuenta</h2>
+                    <div class="input-group">
+                        <input type="text" id="registerUsername" placeholder="Elige un usuario" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="registerPassword" placeholder="Crea una contraseña" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="registerConfirmPassword" placeholder="Confirma tu contraseña" required>
+                    </div>
+                    <button type="submit" class="auth-btn">Registrarse</button>
+                    <p class="auth-switch">¿Ya tienes cuenta? <a href="#" id="showLogin">Inicia sesión</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div class="main-container" id="mainContainer" style="display: none;">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Nuestra Historia 💕</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link active" data-section="dashboard">Dashboard</a>
+                <a href="#" class="nav-link" data-section="calendar">Calendario</a>
+                <a href="#" class="nav-link" data-section="games">Juegos</a>
+                <a href="#" class="nav-link" data-section="mailbox">Buzón</a>
+                <a href="#" class="nav-link" data-section="gallery">Galería</a>
+                <a href="#" class="secret-link" id="secretButton">Hazme Click ✨</a>
+            </div>
+            <button class="logout-btn" id="logoutBtn">Salir</button>
+        </nav>
+
+        <!-- Dashboard Section -->
+        <section class="section active" id="dashboardSection">
+            <div class="welcome-header">
+                <h2 class="welcome-title">Hola, <span id="userName">Hermosa</span></h2>
+                <p class="welcome-subtitle">Estos son nuestros momentos juntos</p>
+            </div>
+
+            <!-- Days Counter - Prominent -->
+            <div class="days-counter">
+                <div class="counter-content">
+                    <div class="counter-number" id="daysCounter">0</div>
+                    <p class="counter-label">Días Amándote</p>
+                    <p class="counter-date">Desde el 1 de Diciembre, 2024</p>
+                </div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-number" data-target="18">0</div>
+                    <div class="stat-label">Salidas Juntos</div>
+                    <div class="stat-progress">
+                        <div class="stat-progress-bar" style="width: 0%;" data-width="90"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">💋</div>
+                    <div class="stat-number" data-target="247">0</div>
+                    <div class="stat-label">Besos Robados</div>
+                    <div class="stat-progress">
+                        <div class="stat-progress-bar" style="width: 0%;" data-width="100"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">😊</div>
+                    <div class="stat-number" data-target="999">0</div>
+                    <div class="stat-label">Sonrisas Provocadas</div>
+                    <div class="stat-progress">
+                        <div class="stat-progress-bar" style="width: 0%;" data-width="100"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">💌</div>
+                    <div class="stat-number" data-target="156">0</div>
+                    <div class="stat-label">Mensajes de Amor</div>
+                    <div class="stat-progress">
+                        <div class="stat-progress-bar" style="width: 0%;" data-width="85"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🤗</div>
+                    <div class="stat-number" data-target="89">0</div>
+                    <div class="stat-label">Abrazos Eternos</div>
+                    <div class="stat-progress">
+                        <div class="stat-progress-bar" style="width: 0%;" data-width="75"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-number" data-target="71">0</div>
+                    <div class="stat-label">Días Especiales</div>
+                    <div class="stat-progress">
+                        <div class="stat-progress-bar" style="width: 0%;" data-width="95"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-section">
+                <div class="chart-card">
+                    <h3>Nuestros Momentos por Mes</h3>
+                    <canvas id="momentsChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Distribución de la Felicidad</h3>
+                    <canvas id="happinessChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline-section">
+                <h3 class="timeline-title">Nuestra Línea del Tiempo</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Septiembre 2024</div>
+                        <div class="timeline-content">
+                            <h4>Nuestro Comienzo 💫</h4>
+                            <p>Todo empezó aquí, cuando nuestros caminos se cruzaron. El universo conspiró para unirnos.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Primera Conversación</div>
+                        <div class="timeline-content">
+                            <h4>Las Primeras Palabras 💬</h4>
+                            <p>Esa primera conversación que duró horas y no queríamos que terminara nunca.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Primera Cita</div>
+                        <div class="timeline-content">
+                            <h4>El Primer Encuentro 🌟</h4>
+                            <p>Nervios, sonrisas y la certeza de que algo especial estaba comenzando.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">26 Octubre 2024</div>
+                        <div class="timeline-content">
+                            <h4>Primer Beso 💋</h4>
+                            <p>El momento que cambió todo para siempre. Nuestros labios se encontraron y el mundo se detuvo.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Primer "Te Amo"</div>
+                        <div class="timeline-content">
+                            <h4>Las Palabras Mágicas 💝</h4>
+                            <p>Cuando finalmente dijimos lo que nuestros corazones ya sabían desde hace tiempo.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1 Diciembre 2024</div>
+                        <div class="timeline-content">
+                            <h4>Oficialmente Juntos 💕</h4>
+                            <p>El día que empezamos a contar nuestros días de amor. Tú y yo, para siempre.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Primera Navidad</div>
+                        <div class="timeline-content">
+                            <h4>Navidad Juntos 🎄</h4>
+                            <p>Nuestra primera Navidad como pareja, creando tradiciones y recuerdos inolvidables.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Año Nuevo 2025</div>
+                        <div class="timeline-content">
+                            <h4>Un Nuevo Año, Mismo Amor 🎊</h4>
+                            <p>Comenzando un nuevo año juntos, con sueños compartidos y mucho amor por delante.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">14 Febrero 2025</div>
+                        <div class="timeline-content">
+                            <h4>Nuestro Primer San Valentín 🌹</h4>
+                            <p>Celebrando el amor que seguimos construyendo día a día, momento a momento.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">20 Febrero 2025</div>
+                        <div class="timeline-content">
+                            <h4>Tu Cumpleaños Especial 🎂</h4>
+                            <p>Celebrando a la persona más maravillosa, increíble y especial del mundo. ¡Feliz cumpleaños, mi amor!</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Nuestro Futuro</div>
+                        <div class="timeline-content">
+                            <h4>Infinitos Momentos por Venir ∞</h4>
+                            <p>Esta es solo una pequeña parte de nuestra historia. Lo mejor está por venir, y lo viviremos juntos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calendar Section -->
+        <section class="section" id="calendarSection">
+            <div class="section-header">
+                <h2>Calendario de Sorpresas 💝</h2>
+                <p>Cada día de febrero tiene algo especial para ti</p>
+            </div>
+            <div class="calendar-grid" id="calendarGrid"></div>
+        </section>
+
+        <!-- Games Section -->
+        <section class="section" id="gamesSection">
+            <div class="section-header">
+                <h2>Zona de Juegos 🎮</h2>
+                <p>Diviértete con estos juegos especiales</p>
+            </div>
+
+            <div class="games-menu">
+                <div class="game-card" onclick="openGameModal('quiz')">
+                    <div class="game-icon">🧠</div>
+                    <h4>Quiz del Amor</h4>
+                    <p>¿Qué tan bien me conoces?</p>
+                </div>
+
+                <div class="game-card" onclick="openGameModal('memory')">
+                    <div class="game-icon">🃏</div>
+                    <h4>Memoria del Amor</h4>
+                    <p>Encuentra las parejas</p>
+                </div>
+
+                <div class="game-card" onclick="openGameModal('lovecalc')">
+                    <div class="game-icon">💖</div>
+                    <h4>Calculadora del Amor</h4>
+                    <p>Nuestra compatibilidad</p>
+                </div>
+
+                <div class="game-card" onclick="openGameModal('fortune')">
+                    <div class="game-icon">🥠</div>
+                    <h4>Galleta de la Fortuna</h4>
+                    <p>Mensaje del día</p>
+                </div>
+
+                <div class="game-card" onclick="openGameModal('tictactoe')">
+                    <div class="game-icon">⭕</div>
+                    <h4>Tres en Línea</h4>
+                    <p>Desafío romántico</p>
+                </div>
+
+                <div class="game-card" onclick="openGameModal('catch')">
+                    <div class="game-icon">💕</div>
+                    <h4>Atrapa Corazones</h4>
+                    <p>¡Reacciona rápido!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mailbox Section -->
+        <section class="section" id="mailboxSection">
+            <div class="section-header">
+                <h2>Buzón de Amor 💌</h2>
+                <p>Mensajes especiales solo para ti</p>
+            </div>
+            <div class="mailbox-container" id="mailboxContainer"></div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="section" id="gallerySection">
+            <div class="section-header">
+                <h2>Nuestra Galería 📸</h2>
+                <p>Momentos capturados, recuerdos eternos</p>
+            </div>
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </section>
+    </div>
+
+    <!-- Valentine Modal -->
+    <div class="modal" id="valentineModal">
+        <div class="modal-content valentine-box">
+            <div class="hearts-float"></div>
+            <h2 class="valentine-title">Una Pregunta Especial...</h2>
+            <p class="valentine-question">¿Quieres ser mi San Valentín? 💕</p>
+            <div class="valentine-buttons">
+                <button class="valentine-btn yes-btn" id="yesBtn">¡Sí! 💖</button>
+                <button class="valentine-btn no-btn" id="noBtn">No...</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Response Modal -->
+    <div class="modal" id="responseModal">
+        <div class="modal-content response-box">
+            <div class="celebration-animation" id="celebrationAnimation"></div>
+            <h2 id="responseTitle"></h2>
+            <p id="responseMessage"></p>
+            <button class="close-modal-btn" id="closeResponseBtn">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Game Modal -->
+    <div class="modal" id="gameModal">
+        <div class="modal-content game-modal-content">
+            <button class="close-game-btn" onclick="closeGameModal()">✕</button>
+            <div id="gameContainer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="games.js"></script>
+</body>
+</html>
