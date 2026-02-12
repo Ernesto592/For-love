@@ -331,8 +331,14 @@ function loadMailbox() {
     
     const messages = [
         {
+            date: '12 Feb 2025',
+            subject: 'Te amo hoy y siempre 💕',
+            content: 'Cada momento contigo se vuelve especial, porque tu presencia llena mi vida de paz y alegría.',
+            unread: true
+        },
+        {
             date: '11 Feb 2025',
-            subject: 'Todo para mi Jhumi precuosa',
+            subject: 'Todo para mi Jhumi preciosa',
             content: 'A veces me detengo a pensar en todo lo que has traído a mi vida, y no puedo evitar sonreír. Tu presencia convierte lo simple en especial, y tu cariño es ese impulso silencioso que me anima a seguir creciendo. No sé cómo explicarlo con exactitud, pero contigo todo tiene más sentido. Gracias por ser tú, Jhumira.💫',
             unread: true
         },
